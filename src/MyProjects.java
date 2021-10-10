@@ -17,5 +17,18 @@ public class MyProjects {
             System.out.println(numbers[i]);
         }
         System.out.println(number);
+        System.out.println();
+
+        // foreach
+        // Позволяет перебрать весь массив
+        String[] strings = new String[3];
+        for (String x:strings){
+            System.out.println(x);
+        }
+        /*
+        * Где String - тип данных
+        * x - временная переменная (counter)
+        * strings - имя массива
+        */
     }
 }
