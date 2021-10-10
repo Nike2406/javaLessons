@@ -1,34 +1,34 @@
 public class MyProjects {
     public static void main(String [] args) {
-        int number = 10; // примитивный тип данных       [10]
-        int[] numbers = new int[5]; // ссылочный тип данных
-        // numbers->[array]
+        Person person1 = new Person();
+        String s1 = "Mike";
+        person1.setName(s1);
+        person1.setAge(20);
+        person1.sayHello();
+        person1.speak();
+    }
+    /*
+    * Обращаться к параметра объектов можно напрямую через
+    * person1.age = 10;
+    * Но данный подход нарушает принцип инкапусуляции
+    * Правильнее обращаться через метод для избежания ввода
+    * не корректных данных
+    */
+    static class Person{
+        String  name;
+        int     age;
 
-//        numbers[0] = 10;
-//        numbers[1] = 20;
-//        int[] numbers = {1;2;3};
-
-        for (int i = 0; i < numbers.length; i++)
-        {
-            numbers[i] = i + 5;
+        void    setName(String userName){
+            name = userName;
         }
-        for (int i = 0; i < numbers.length; i++)
-        {
-            System.out.println(numbers[i]);
+        void    setAge(int userAge){
+            age = userAge;
         }
-        System.out.println(number);
-        System.out.println();
-
-        // foreach
-        // Позволяет перебрать весь массив
-        String[] strings = new String[3];
-        for (String x:strings){
-            System.out.println(x);
+        void speak(){
+            System.out.println("My name is "+name+", i'm "+age+" years old.");
         }
-        /*
-        * Где String - тип данных
-        * x - временная переменная (counter)
-        * strings - имя массива
-        */
+        void    sayHello(){
+            System.out.println("Hello!");
+        }
     }
 }
