@@ -7,7 +7,7 @@ import java.util.Arrays;
 * Ссылочный тд - ссылается на объект класса (String)
 * */
 
-public class Strings {
+public class MyProjects {
     public static void main(String [] args) {
         int x = 10;
         String s = "Hello";
