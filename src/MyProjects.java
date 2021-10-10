@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class HelloWorld {
+public class MyProjects {
     public static void main(String [] args) {
         int myInt1 = 10;
         short myInt2;
