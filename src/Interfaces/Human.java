@@ -1,6 +1,7 @@
 package Interfaces;
 
-public class Human {
+// implements = реализует (т.е. классы должны испльзовать метод showInfo)
+public class Human implements Info{
     public String name;
 
     public Human(String name) {
@@ -9,5 +10,9 @@ public class Human {
 
     public void sayHello(){
         System.out.println("Hello!");
+    }
+
+    public void showInfo() {
+        System.out.println("Name is "+this.name);
     }
 }
