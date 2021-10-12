@@ -1,24 +1,17 @@
 /*
-* Любой класс в Java наследуется от класса Object
+* Так как уже был создан класс Animal,
+* мы сразу можем создавать объекты этого класса
 * */
 public class MyProjects {
     public static void main(String[] args){
-        Human h1 = new Human("Bob", 40);
-        System.out.println(h1);
-        h1.toString(); // возвращает хешкод созданного объекта
+//        Animal animal = new Animal();
+//        animal.eat();
+//        animal.sleep();
+        Dog dog = new Dog();
+        dog.eat();
+        dog.bark();
+        dog.showName();
     }
 }
-class  Human {
-    private String  name;
-    private int     age;
 
-    public Human(String name, int age){
-        this.name = name;
-        this.age = age;
-    }
-
-    public String toString(){ // переопределение метода объекта
-        return name+", "+age;
-    }
-}
 
