@@ -22,6 +22,7 @@ public class Test {
         // ! info.sleep();
         outputInfo(animal1);
         outputInfo(human1);
+        // для обработки
     }
 
     public static void outputInfo(Info info) {
