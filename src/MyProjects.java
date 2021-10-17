@@ -1,28 +1,17 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+// Абстрактные классы очень похожи на интерефейсы
+
+// Интерфейс - контракт,то, что класс умеет делать
+// Абстрактный класс - то, чем класс является
+// Например, кошка и собака являются животными
 
 public class MyProjects {
     public static void main(String[] args) {
-        // Checked exception (Compile time exception)
-        //      - исключения, которые возникают во время компиляции
-        // Unchecked exception (Runtime exception)
-        //      - возникают во время работы программы
-
-        //checked - исключительный случай
-        File file = new File("test");
-        try {
-            Scanner scanner = new Scanner(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        //unchecked - ошибка
-        int a = 1 / 0;
-        String name = null;
-        name.length();
-
-        int[] arr = new int[2];
-        System.out.println(arr[2]);
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        cat.eat();
+        cat.makeSound();
+        dog.eat();
+        dog.makeSound();
     }
 }
 
