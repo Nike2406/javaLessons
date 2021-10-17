@@ -1,24 +1,28 @@
-import java.io.IOException;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class MyProjects {
-    public static void main(String[] args) throws ScannerException {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            int x = Integer.parseInt(scanner.nextLine());
-            // у объекта Integer, метод parseInt переводит строку в число
+    public static void main(String[] args) {
+        // Checked exception (Compile time exception)
+        //      - исключения, которые возникают во время компиляции
+        // Unchecked exception (Runtime exception)
+        //      - возникают во время работы программы
 
-//            if (x != 0) {
-//                try {
-//                    throw new IOException();
-//                } catch (IOException e) {
-//                    System.out.println("Не 0!");
-//                }
-//            }
-            if (x != 0){
-                throw new ScannerException("Не 0!");
-            }
+        //checked - исключительный случай
+        File file = new File("test");
+        try {
+            Scanner scanner = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
+        //unchecked - ошибка
+        int a = 1 / 0;
+        String name = null;
+        name.length();
+
+        int[] arr = new int[2];
+        System.out.println(arr[2]);
     }
 }
 
