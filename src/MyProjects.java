@@ -1,23 +1,24 @@
-import java.io.File;
-import java.io.FileNotFoundException; // наследуется от класса Exception
+import java.io.IOException;
 import java.util.Scanner;
 
 public class MyProjects {
-    public static void main(String[] args) throws FileNotFoundException {
-        // throws FileNotFoundException - выбрасывает код ошибки
+    public static void main(String[] args) throws ScannerException {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            int x = Integer.parseInt(scanner.nextLine());
+            // у объекта Integer, метод parseInt переводит строку в число
 
-        // Исключения созданы для обработки ошибок
-        // Все классы исключений наследуются от класса Exception
-     File file = new File("ew");
-     Scanner scanner = new Scanner(file);
-
-     // также возможна обработка через  try/catch
-        // попробуй одно, если не получилось, сделай другое
-//        try {
-//            Scanner scanner1 = new Scanner("ijwef");
-//        } catch (FileNotFoundException e) {
-//            System.out.println("Файл не найден");
-//        }
+//            if (x != 0) {
+//                try {
+//                    throw new IOException();
+//                } catch (IOException e) {
+//                    System.out.println("Не 0!");
+//                }
+//            }
+            if (x != 0){
+                throw new ScannerException("Не 0!");
+            }
+        }
     }
 }
 
