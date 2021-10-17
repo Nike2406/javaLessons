@@ -1,17 +1,28 @@
-// Абстрактные классы очень похожи на интерефейсы
-
-// Интерфейс - контракт,то, что класс умеет делать
-// Абстрактный класс - то, чем класс является
-// Например, кошка и собака являются животными
-
 public class MyProjects {
     public static void main(String[] args) {
-        Dog dog = new Dog();
-        Cat cat = new Cat();
-        cat.eat();
-        cat.makeSound();
-        dog.eat();
-        dog.makeSound();
+       Animal animal1 = new Animal(1);
+       Animal animal2 = new Animal(1);
+        /*
+        * System.out.println(animal1 == animal2);
+        *   // false
+        *   - сравнивает ссылки на объекты (указатели)
+        * equals также сравнивает объекты как ссылки
+        * */
+        System.out.println(animal1.equals(animal2));
+    }
+}
+
+class Animal {
+    private int id;
+
+    public Animal(int id){
+        this.id = id;
+    }
+
+    public boolean equals(Object obj) {
+        // переопределяем метом equals для корректного сравнения
+        Animal otherAnimal = (Animal) obj; // downcasting;
+        return this.id == otherAnimal.id;
     }
 }
 
