@@ -1,25 +1,23 @@
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.FileNotFoundException; // наследуется от класса Exception
 import java.util.Scanner;
 
 public class MyProjects {
     public static void main(String[] args) throws FileNotFoundException {
-        // File.separator - автоматически определяет систему
-        // и выводит правильный знак / \
-        String separator = File.separator;
-       String path = separator+"Users"+separator+"prochell"+
-        separator+"projects"+separator+"javaLessons"+separator+"test";
-        // Если файл лежит в корне, то проще
-        File file2 = new File("test2");
-       // File - выводит файл в переменную с адресом
-       File file = new File(path);
+        // throws FileNotFoundException - выбрасывает код ошибки
 
-       // Scanner тажке может считывать файл
-       Scanner scanner = new Scanner(file);
-       while (scanner.hasNextLine()){
-           System.out.println(scanner.nextLine());
-       }
-       scanner.close();
+        // Исключения созданы для обработки ошибок
+        // Все классы исключений наследуются от класса Exception
+     File file = new File("ew");
+     Scanner scanner = new Scanner(file);
+
+     // также возможна обработка через  try/catch
+        // попробуй одно, если не получилось, сделай другое
+//        try {
+//            Scanner scanner1 = new Scanner("ijwef");
+//        } catch (FileNotFoundException e) {
+//            System.out.println("Файл не найден");
+//        }
     }
 }
 
